@@ -2,13 +2,15 @@ import createBasicMainPage from './main-page';
 import createMenuPage from './menu-page';
 
 const divContent = document.querySelector('div#content');
+console.log('test');
 
 createBasicMainPage();
 
 const navUl = document.querySelector('nav ul');
+console.log(navUl);
 navUl.addEventListener('click', (e) => {
-  const a = e.target.innerHTML;
-  const linkName = a.innerHTML;
+  console.log(e.target);
+  const linkName = e.target.innerHTML;
 
   if (linkName === 'Menu') {
     divContent.innerHTML = '';
