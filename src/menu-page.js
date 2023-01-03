@@ -18,11 +18,13 @@ export default function createMenuPage() {
   menuTitle.innerHTML = 'Menu';
 
   const gridContainer = document.createElement('div');
+  gridContainer.classList.add('grid-container');
   const foodImageFileNames = ['lasagna.jpg', 'risotto.jpg', 'pizza.jpg',
     'arancini.jpg', 'ossobuco.jpg', 'ribollita.jpg'];
   const foodPrices = ['$20', '$12', '$25', '$15', '$20', '$12'];
   for (let i = 0; i < foodImageFileNames.length; i += 1) {
     const foodCard = document.createElement('div');
+    foodCard.classList.add('food-card');
 
     const foodImage = document.createElement('img');
     foodImage.src = `../src/images/${foodImageFileNames[i]}`;

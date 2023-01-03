@@ -1,13 +1,12 @@
 import createBasicMainPage from './main-page';
 import createMenuPage from './menu-page';
+import createContactPage from './contact-page';
 
 const divContent = document.querySelector('div#content');
-console.log('test');
 
 createBasicMainPage();
 
 divContent.addEventListener('click', (e) => {
-  console.log(e.target);
   const linkName = e.target.innerHTML;
 
   if (linkName === 'Menu') {
@@ -16,5 +15,8 @@ divContent.addEventListener('click', (e) => {
   } else if (linkName === 'Home') {
     divContent.innerHTML = '';
     createBasicMainPage();
+  } else if (linkName === 'Contact') {
+    divContent.innerHTML = '';
+    createContactPage();
   }
 });
