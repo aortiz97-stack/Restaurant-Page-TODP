@@ -3,3 +3,34 @@
     flex-direction: column;
     align-items: center;
 }
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+  background-color: yellow;
+  width: 100%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.home-background {
+    width: 100%;
+    object-fit: cover;
+}
+
+.home-background-container {
+    width: 25%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+}

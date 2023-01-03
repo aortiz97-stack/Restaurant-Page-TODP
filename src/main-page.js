@@ -1,4 +1,6 @@
 export default function createBasicMainPage() {
+  const divContent = document.querySelector('div#content');
+
   const nav = document.createElement('nav');
   const ul = document.createElement('ul');
   const tabNames = ['Home', 'Menu', 'Contact'];
@@ -11,10 +13,15 @@ export default function createBasicMainPage() {
     ul.appendChild(li);
   }
   nav.appendChild(ul);
+  divContent.appendChild(nav);
 
+  const imgContainer = document.createElement('div');
+  imgContainer.classList.add('home-background-container');
   const img = document.createElement('img');
   img.src = '../src/images/italian_dinner.jpg';
   img.alt = 'Italian dinner being served';
+  img.classList.add('home-background');
+  imgContainer.appendChild(img);
 
   const h1 = document.createElement('h1');
   h1.innerHTML = 'Il Gustoso Pomodoro';
@@ -22,9 +29,7 @@ export default function createBasicMainPage() {
   const p = document.createElement('p');
   p.innerHTML = 'Come eat at our newly-opened location! Our authentic Italian dining is the perfect spot for any first date!';
 
-  const divContent = document.querySelector('div#content');
-  divContent.appendChild(nav);
-  divContent.appendChild(img);
   divContent.appendChild(h1);
+  divContent.appendChild(imgContainer);
   divContent.appendChild(p);
 }
