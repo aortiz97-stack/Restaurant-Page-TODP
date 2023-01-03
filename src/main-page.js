@@ -13,7 +13,7 @@ export default function createBasicMainPage() {
   nav.appendChild(ul);
 
   const img = document.createElement('img');
-  img.src = '../images/italian_dinner.jpg';
+  img.src = '../src/images/italian_dinner.jpg';
   img.alt = 'Italian dinner being served';
 
   const h1 = document.createElement('h1');
@@ -22,9 +22,9 @@ export default function createBasicMainPage() {
   const p = document.createElement('p');
   p.innerHTML = 'Come eat at our newly-opened location! Our authentic Italian dining is the perfect spot for any first date!';
 
-  const div = document.querySelector('div');
-  div.appendChild(nav);
-  div.appendChild(img);
-  div.appendChild(h1);
-  div.appendChild(p);
+  const divContent = document.querySelector('div#content');
+  divContent.appendChild(nav);
+  divContent.appendChild(img);
+  divContent.appendChild(h1);
+  divContent.appendChild(p);
 }
