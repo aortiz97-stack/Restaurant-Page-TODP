@@ -1,19 +1,6 @@
 export default function createMenuPage() {
   const divContent = document.querySelector('div#content');
 
-  const nav = document.createElement('nav');
-  const ul = document.createElement('ul');
-  const tabNames = ['Home', 'Menu', 'Contact'];
-  for (let i = 0; i < tabNames.length; i += 1) {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = '#';
-    a.innerHTML = tabNames[i];
-    li.appendChild(a);
-    ul.appendChild(li);
-  }
-  nav.appendChild(ul);
-
   const menuTitle = document.createElement('h1');
   menuTitle.innerHTML = 'Menu';
 
@@ -43,7 +30,6 @@ export default function createMenuPage() {
 
     gridContainer.appendChild(foodCard);
 
-    divContent.append(nav);
     divContent.append(menuTitle);
     divContent.append(gridContainer);
   }
