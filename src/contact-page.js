@@ -6,21 +6,6 @@ function createPElements(innerHTML) {
 
 export default function createContactPage() {
   const divContent = document.querySelector('div#content');
-
-  const nav = document.createElement('nav');
-  const ul = document.createElement('ul');
-  const tabNames = ['Home', 'Menu', 'Contact'];
-  for (let i = 0; i < tabNames.length; i += 1) {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = '#';
-    a.innerHTML = tabNames[i];
-    li.appendChild(a);
-    ul.appendChild(li);
-  }
-  nav.appendChild(ul);
-  divContent.appendChild(nav);
-
   const contactHeader = document.createElement('h1');
   contactHeader.innerHTML = 'Contact';
   divContent.appendChild(contactHeader);

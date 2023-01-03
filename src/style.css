@@ -5,12 +5,30 @@
 body {
     margin: 0;
     height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#bottom-container {
+    display: flex;
+    height: 100%;
+}
+
+.panel {
+    flex-grow: 1;
+    background-color: brown;
+    max-width: 33%;
 }
 
 #content {
+    flex-grow: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    max-width: 50%;
+    padding: 30px;
 }
 
 a {
@@ -37,14 +55,17 @@ ul {
     list-style: none;
 }
 
+p {
+    text-align: center;
+}
+
 .home-background {
-    width: 100%;
     object-fit: cover;
 }
 
 .home-background-container {
-    width: 25%;
-    height: 25%;
+    width: 50%;
+    height: 50%;
     display: flex;
     justify-content: center;
 }

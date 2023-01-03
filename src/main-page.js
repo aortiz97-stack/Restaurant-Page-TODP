@@ -1,6 +1,7 @@
 export default function createBasicMainPage() {
   const divContent = document.querySelector('div#content');
   const imgContainer = document.createElement('div');
+
   imgContainer.classList.add('home-background-container');
   const img = document.createElement('img');
   img.src = '../src/images/italian_dinner.jpg';

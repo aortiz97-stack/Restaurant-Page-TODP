@@ -4,6 +4,7 @@ import createContactPage from './contact-page';
 
 const divContent = document.querySelector('div#content');
 const body = document.querySelector('body');
+const bottomContainer = document.querySelector('div#bottom-container');
 
 const nav = document.createElement('nav');
 const ul = document.createElement('ul');
@@ -17,7 +18,15 @@ for (let i = 0; i < tabNames.length; i += 1) {
   ul.appendChild(li);
 }
 nav.appendChild(ul);
-body.insertBefore(nav, divContent);
+body.insertBefore(nav, bottomContainer);
+
+const divPanel1 = document.createElement('div');
+divPanel1.classList.add('panel');
+const divPanel2 = document.createElement('div');
+divPanel2.classList.add('panel');
+
+bottomContainer.insertBefore(divPanel1, divContent);
+divContent.after(divPanel2);
 
 createBasicMainPage();
 
