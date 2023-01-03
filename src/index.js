@@ -6,14 +6,15 @@ console.log('test');
 
 createBasicMainPage();
 
-const navUl = document.querySelector('nav ul');
-console.log(navUl);
-navUl.addEventListener('click', (e) => {
+divContent.addEventListener('click', (e) => {
   console.log(e.target);
   const linkName = e.target.innerHTML;
 
   if (linkName === 'Menu') {
     divContent.innerHTML = '';
     createMenuPage();
+  } else if (linkName === 'Home') {
+    divContent.innerHTML = '';
+    createBasicMainPage();
   }
 });
