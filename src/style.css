@@ -116,3 +116,16 @@ p {
     object-fit: cover;
     width: 100%;
 }
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-card{
+    text-align: center;
+    background: purple;
+    padding: 10px;
+    border-radius: 15px;
+}
